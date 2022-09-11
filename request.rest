@@ -55,3 +55,35 @@ Content-Type: application/json
 {
     "turma_id": "0001"
 }
+
+###
+
+# @name criarDocente
+
+POST http://localhost:3003/teacher/
+Content-Type: application/json
+
+{
+    "nome": "Edmar",
+    "email": "edmar@labenu.brabo.br",
+    "data_nasc": "1996-02-03",
+    "turma_id": "0001"
+}
+
+###
+
+# @name pegarTodosDocentes
+
+GET http://localhost:3003/teachers/
+Content-Type: application/json
+
+###
+
+# @name trocarTurmaDoDocente
+
+PUT http://localhost:3003/teacher/1da0e17a-2a5a-4d7e-be64-e44f5605b2e7/class
+Content-Type: application/json
+
+{
+    "turma_id": "8ff94799-34e3-4adc-a920-d5fd0569a46f"
+}
