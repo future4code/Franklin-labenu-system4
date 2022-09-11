@@ -1,0 +1,23 @@
+# @name criarTurma
+POST http://localhost:3003/class/
+Content-Type: application/json
+
+{
+    "nome": "Franklin"
+}
+
+###
+
+# @name pegarTurmasAtivas
+GET http://localhost:3003/class/active
+Content-Type: application/json
+
+###
+
+# @name alteraModuloDaTurma
+PUT http://localhost:3003/class/8ff94799-34e3-4adc-a920-d5fd0569a46f/module
+Content-Type: application/json
+
+{
+    "modulo": 3
+}

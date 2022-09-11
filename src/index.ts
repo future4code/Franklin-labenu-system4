@@ -1,11 +1,8 @@
 import app from "./app";
-import { Request, Response } from "express";
+import changeClassModule from "./endpoint/changeClassModule";
+import createClass from "./endpoint/createClass";
+import getActiveClass from "./endpoint/getActiveClass";
 
-app.get("/", (req:Request, res:Response):void => {
-    try {
-        res.status(200).send("Hello world!");
-    } catch(error:any) {
-        console.error(error.message);
-        res.status(500).send(error.message);
-    }
-});
+app.post("/class", createClass);
+app.get("/class/active", getActiveClass);
+app.put("/class/:id/module", changeClassModule);
