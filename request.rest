@@ -21,3 +21,37 @@ Content-Type: application/json
 {
     "modulo": 3
 }
+
+
+###
+
+# @name criarEstudante
+POST http://localhost:3003/student/
+Content-Type: application/json
+
+{
+    "nome": "Luan Santana",
+    "email": "meteoro@dapaixao.com.br",
+    "data_nasc": "1995-04-26",
+    "turma_id": "8ff94799-34e3-4adc-a920-d5fd0569a4f"
+}
+
+###
+
+# @name pegarEstudantePeloNome
+GET http://localhost:3003/student/name
+Content-Type: application/json
+
+{
+    "nome": "Luan"
+}
+
+###
+
+# @name trocarTurmaDoEstudante
+PUT http://localhost:3003/student/adac67cb-a8d5-4ebf-9c71-cc9d95666366/class
+Content-Type: application/json
+
+{
+    "turma_id": "0001"
+}

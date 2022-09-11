@@ -23,7 +23,15 @@ class ClassDatabase extends BaseDatabase {
         .where({ id });
 
         return Number(affectedRows);
-    }
+    };
+
+    public getById = async (id: string): Promise<any> => {
+        const [result] = await this.getConnection()(ClassDatabase.dataBase)
+        .select()
+        .where({ id });
+
+        return result;
+    };
 }
 
 export default ClassDatabase;

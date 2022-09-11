@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ClassDatabase from "../data/ClassDatabase";
+import ClassDatabase from "../../data/ClassDatabase";
 
 async function changeClassModule(req: Request, res: Response): Promise<void> {
     try {

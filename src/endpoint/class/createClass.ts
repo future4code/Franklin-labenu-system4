@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import ClassDatabase from "../data/ClassDatabase";
-import IdGenerator from "../services/IdGenerator";
-import { Class } from "../types";
+import ClassDatabase from "../../data/ClassDatabase";
+import IdGenerator from "../../services/IdGenerator";
+import { Class } from "../../types";
 
 async function createClass(req: Request, res: Response): Promise<void> {
     try {
